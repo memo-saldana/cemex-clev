@@ -1,13 +1,8 @@
 <% include ./partials/header %>
-<div class="container-fluid">
+<div class="container text-center">
     <div class="row">
-        <div class="col-lg-4 invoices">
-            <h1>Obtener Facturas</h1>
-            <form action="/invoice/new" method="post">
-                <div class="form-group">
-                    <input type="submit" class="btn btn-lg btn-primary" value="NUEVAS">
-                </div>
-            </form>
+        <div class="invoices">
+            <h1>Facturas Descargadas</h1>
             <!--
             <form action="/logs" method="post">
                 <div class="form-group">
@@ -18,9 +13,9 @@
                 </div>
             </form>-->
         </div>
-        <div class="col-lg-8">
+        <div>
             <% xmlArray.forEach(function(invoice, i) { %>
-            <div>
+            <div class="jumbotron xml">
                 <h2>Factura
                     <%=i+1%>
                 </h2>

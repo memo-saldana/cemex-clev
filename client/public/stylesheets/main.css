@@ -1,7 +1,33 @@
-.invoices h1 {
-    padding: 20px;
+*{
+	font-family: 'Poppins', sans-serif;
 }
 
-btn-lg {
+.invoices h1 {
+    padding: 0px 20px;
+}
+
+.btn-lg {
     margin-left: 20px;
+}
+.padding-bottom{
+	
+	margin-bottom: 30px;
+	/*margin-top: 10px*/
+}
+h1 .padding-bottom{
+	margin-top: 30px;
+}
+h2{
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+.xml{
+	word-wrap: break-word;
+	overflow: scroll;
+	height: 400px;
+	padding-top: 20px;
+}
+
+.xml h2{
+	padding-top: 0px;
 }
