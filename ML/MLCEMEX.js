@@ -1,37 +1,35 @@
 class Empresa {
-  constructor (facturasGeneradasporDia, cadaCuantosDiasBajaFacturas){
-    this.facturasGeneradasporDia = 0;
-    this.cadaCuantosDiasBajaFacturas = 0;
+  constructor (a, b){
+    this.facturasGeneradasporDia = a;
+    this.cadaCuantosDiasBajaFacturas = b;
   }
 
 }
 
-fuction recomendacion (empresas, var n, var query){
-  var rec;
+function recomendacion (empresas, n, query){
+  let rec;
   if ( query === 0) return 0;
-  var m = 1;
-  var penSum = 0;
-  
-  for(var i = 0; i < n; i++){
-    penSum += empresas[i].facturasGeneradasPorDia / empresas[i].cadaCuantosDiasBajaFacturas;
+  let m = 1;
+  let penSum = 0;
+  console.log(penSum)
+  //console.log(empresas[0]);
+  for(let i = 0; i < n; i++){
+    console.log(empresas[i].a)
+    penSum += parseInt(empresas[i].a/empresas[i].b);
+    console.log(i+1 + " " + parseInt(empresas[i].a/empresas[i].b));
+    console.log(penSum);
   }
     m = penSum/n; 
+    console.log(m);
     rec = Math.ceil(m / query);
     return rec; 
 }
 
-var uno = new Empresa(12,4);
-var dos = new Empresa(290,1);
-var tres = new Empresa(2,10);
-var cuatro = new Empresa(9.7);
-var cinco = new Empresa(123,1);
+emp = [{a:12, b:4},{a:290, b:1},{a:2, b:10},{a:9, b:7},{a:123, b:1}];
 
-Empresa emp[5] = [uno,dos,tres,cuatro,cinco];
 
-n = 4;
-var query = 0;
-
+var query = 120;
 console.log("Dame tu query");
-var response = readline();
+//var query = prompt("asdfsdf");
 
-console.log(recomendacion(emp,n,query));
+console.log(recomendacion(emp, 5, query));
