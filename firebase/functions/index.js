@@ -89,7 +89,7 @@ app.get("/:clientKey/logs/:time/:log",(req,res)=>{
 	console.log(aclientKey);
 	console.log(amessage);
 	console.log(atimestamp);
-	db.collecton("Logs").add({
+	db.collection("Logs").add({
 		clientKey: aclientKey,
 		message: amessage,
 		timestamp: atimestamp 
