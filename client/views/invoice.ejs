@@ -1,18 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Invoice</title>
-</head>
-<body>
-    <h1>Factura</h1>
-    <% xmlArray.forEach(function(invoice, i) { %>
-        <div>
-            <h2>Factura <%=i+1%></h2>
-            <%=invoice %>
+<% include ./partials/header %>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4 invoices">
+            <h1>Obtener Facturas</h1>
+            <form action="/invoice/new" method="post">
+                <div class="form-group">
+                    <input type="submit" class="btn btn-lg btn-primary" value="NUEVAS">
+                </div>
+            </form>
+            <!--
+            <form action="/logs" method="post">
+                <div class="form-group">
+                    Message: <input type="text" class="form-control" name="log"><br>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="form-control" value="Mandalo alv">
+                </div>
+            </form>-->
         </div>
-    <% }) %>
+        <div class="col-lg-8">
+            <% xmlArray.forEach(function(invoice, i) { %>
+            <div>
+                <h2>Factura
+                    <%=i+1%>
+                </h2>
+                <%=invoice %>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
 </body>
+
 </html>
