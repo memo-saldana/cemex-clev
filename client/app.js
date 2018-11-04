@@ -65,22 +65,24 @@ app.post("/logs", (req,res) =>{
 	console.log(clientKey);
 	console.log(mylog);
 	console.log(mytime);
-	const url = "http://clev-cemex-api.firebaseapp.com/logs/" + clientKey;
-	request.post({ url, form: {clientKey: clientKey, message: mylog, timestamp: mytime}}, function(err,resp,body){
+	var formData = {
+		clientKey: clientKey,
+		message: mylog,
+		timestamp: mytime
+	}
+	const url = "http://clev-cemex-api.firebaseapp.com/" + clientKey + "/logs";
+	request.post({url: url, formData: formData} , function(err,resp,body){
 		if(!err){
 			if(resp.statusCode == 200){
 				res.redirect("/home");
 			} else {
-				res.send("ERROR "+ resp.statusCode);
+				res.send("ERROR stat code "+ resp.statusCode);
 			}
 		} else{
 			console.log(err);
 			res.send("ERROR");
 		}
 	})
-
-
-	res.redirect("/home");
 });
 
 app.listen(8000, function() {
