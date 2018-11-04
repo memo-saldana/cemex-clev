@@ -47,7 +47,22 @@ app.get("/:clientKey/new/invoices", (req,res)=> {
 		console.log(error);
 		return false;
 	});
-
 });
+
+
+app.post("/logs/:clientKey",(req,res)=>{
+	const clientKey = req.body.clientKey;
+	const message = req.body.message;
+	const timestamp = req.body.timestamp;
+	console.log(clientKey);
+	console.log(message);
+	console.log(timestamp);
+	let json= {
+		statusCode : 200
+	}
+	res.send('good!');
+
+
+})
 
 exports.app = functions.https.onRequest(app);
