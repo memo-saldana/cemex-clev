@@ -30,13 +30,16 @@ function timestamp(){
 		ss = '0'+ss
 	}
 
-	return yyyy+'/'+mm+'/'+dd+' '+hh+':'+min+':'+ss
+	return yyyy+'-'+mm+'-'+dd+' '+hh+':'+min+':'+ss
 }
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine","ejs");
 var clientKey = "10000000"
 
+app.get("/", (req,res) => {
+	res.redirect("home");
+})
 
 app.get('/home', (req,res) => {
     res.render("index");
@@ -54,7 +57,6 @@ app.post('/invoice/new', (req, res) => {
             xmlArray.push(invoice);
         });
     
-        console.log(xmlArray);
         res.render('invoice', {xmlArray:xmlArray});
     });
 });
@@ -66,6 +68,7 @@ app.post("/logs", (req,res) =>{
 	console.log(mylog);
 	console.log(mytime);
 	const url = "http://clev-cemex-api.firebaseapp.com/" + clientKey + "/logs/"+mytime+"/"+mylog;
+	console.log(url);
 	request(url, (error,response,body)=>{
 		if(!error && response.statusCode == 200){
 			var data = JSON.parse(body);
