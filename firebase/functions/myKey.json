@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "clev-cemex-api",
+  "private_key_id": "c59356d98cebe1ca55e5704afd29340345d951b5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCiSEN6rdRxge8T\nkuVG9l9mFV59uSxD2Tu/yTgsjtdB8v9StTQ7yK57uEywYIkqq33pC6nlWsU3yTZv\nvxX5X8fdzthDiyfWLc6ahzEiLeNaeYK+RtDj2VaT+Ka9VcGb3wZvQR2Rr65fpdkh\nCH2WPzjCLenlxlAYWXEOWhmIinbCfn9RAzI55U2xuRE8KGbpcuoT7Qx67BRtlZ/K\n1hgRJYHaBqmSQsJH2tTXI6F3kRMXxKUWyvCnB4BjJhRH37hZ4dSuUzy/X18unrW7\nHQyGrwfmUAdVpryvDIOk2UjcOzoMRVgLB0iMLX7Cstgyw4/dJvxpaGO9nsdTQMY8\nHL2y9oerAgMBAAECggEAE4p3Eakn2SkntCguko5tK1osYCAxi9P3JV9h87+ZfPf5\nNajbKs298Oje1ygwrCItTagZY6Q79j004FzWlQorA3L6SJvThq9KXwIjcPWsmELk\ncuwNEDql+bhpv4e5gf7ng/MHz/ijGyJZ1Gf002g2ee9UaFYqY9w1SGCiDXZ62W13\n4qazwmtYJr7EtwHpTrvlFv7IHUgCr2YgKYJBFp6MI2EeIsP40nUtQ0NL6RcMYhwO\na4kQo6rHKuMey9TVOqYBP+NbaifRt8DbWDH3FlVsKLxJzZC7MZF5Q+dWBUNEAlyw\nJZjb8DvIBShq2Y/SU5OXOVwU6ZTtRlQ/sAFaUZa1NQKBgQDS52AZTc2sBtQ+8rzE\nX00PoE+6ugvplEbxFsLiBU2ZYvlONdjtEvcO1ueCFJULBj7+ZzMGK5EIj3s1c050\nx74LBVNkTP5ALVePSHJEYIfhV93KtHedC3U1GliPhHIhGo9abtLT7nM0sSXAohtv\ndfW0y3bCdiqnjtoBW617Z3Pn/wKBgQDE+2c7d4QTdsw/3Cy9ZS0LZBBQww+xaavd\nQBrY+ufDSo1t66Hi4eA69xW5alE4QL2LUd/1ni0cRqAYK2ewruw0hVgrcayhFj95\nlwGMsW8BYAa+6czB2GoCgXcLCi4Ksuq83fG92Kn64nNJKpx799x40FRWA1nigyGn\nuJz9IoWAVQKBgGRaVA+2RbclSLjrJ4cJEdHtpgJjpGdwdpEhE3oYq+PghGACn0Wv\nUH9vIply0bh9MFw9HrpA4LICE85LH3nR0UvNLPD88b331UIIZtbCV+WRuadKV+AS\nI6Mw9hLUIro9uRh+wzK0s3zPDferKwLOTivI5KmDMKiqAHHE/bdKcoxhAoGANubD\nHQXwn+QqhVn+dkMuzM/05C2ZwB7tsdreIL+9vOaYiJx2IGBIOOcI/Qau4Hja22vU\nega+F/VvRY1DdzEp0HGh42npbXRf+Kmn2ujRQZbcCnXrhdOlqFEhNsh9kKnRVxac\n/AbZSX24GBpyRvMMVffqqZaBhOp7hN2lk7/9aYkCgYEAuiw41q4ck6Fit9miFoBK\nPxQsAGN627p3o0glWMWniAATuvlyf19PKi1tnqaSVGaQ2ThRWC0fB8XUNv6qAQrp\nOzzcq+MahIV77JDhOTQSzyF/JiKqD5j6aepHPZyG37pDQkQxrbSjz3KTWPZvr4li\nVlRDK6nkCPDb5c5w6ZbQJ2M=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-ws6vp@clev-cemex-api.iam.gserviceaccount.com",
+  "client_id": "112914203141318246304",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-ws6vp%40clev-cemex-api.iam.gserviceaccount.com"
+}
