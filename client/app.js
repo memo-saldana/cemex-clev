@@ -67,24 +67,39 @@ app.post("/logs", (req,res) =>{
 	console.log(clientKey);
 	console.log(mylog);
 	console.log(mytime);
-	var formData = {
-		clientKey: clientKey,
-		message: mylog,
-		timestamp: mytime
-	}
-	const url = "http://clev-cemex-api.firebaseapp.com/" + clientKey + "/logs";
-	request.post({url: url, formData: formData} , function(err,resp,body){
-		if(!err){
-			if(resp.statusCode == 200){
-				res.redirect("/home");
-			} else {
-				res.send("ERROR stat code "+ resp.statusCode);
-			}
-		} else{
-			console.log(err);
-			res.send("ERROR");
+	const url = "http://clev-cemex-api.firebaseapp.com/" + clientKey + "/logs/"+mytime+"/"+mylog;
+	request(url, (error,response,body)=>{
+		if(!error && response.statusCode == 200){
+			var data = JSON.parse(body);
+			res.redirect("home");
+			console.log("GOOD")
 		}
-	})
+		else {
+			res.redirect("home");
+			console.log("BAD")
+		}
+	});
+	// var formData = {
+	// 	clientKey: clientKey,
+	// 	message: mylog,
+	// 	timestamp: mytime
+	// }
+	// const url = "http://clev-cemex-api.firebaseapp.com/" + clientKey + "/logs";
+	// request.post({url: url, formData: formData} , function(err,res,body){
+	// 	if(err){
+	// 		return console.error('Upload failed: ', err);
+	// 	}
+	// 	console.log('Upload successful! Server responded with: ', body, res.statusCode)
+	// 	if(!err){
+	// 		if(res.statusCode == 200){
+	// 		} else {
+	// 			res.redirect("ERROR stat code "+ res.statusCode);
+	// 		}
+	// 	} else{
+	// 		console.log(err);
+	// 		res.send("ERROR");
+	// 	}
+	// })
 });
 
 app.listen(8000, function() {
