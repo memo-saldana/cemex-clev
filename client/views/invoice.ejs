@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Empresa Prueba</title>
+    <title>Invoice</title>
 </head>
 <body>
-    <h1>HOLA</h1>
-    <form action="/invoice/new" method="post">
-        <input type="submit" value="A VER SI JALA">
-    </form>
+    <h1>Factura</h1>
+    <% xmlArray.forEach(function(invoice, i) { %>
+        <div>
+            <h2>Factura <%=i+1%></h2>
+            <%=invoice %>
+        </div>
+    <% }) %>
 </body>
 </html>
