@@ -1,12 +1,21 @@
-
-    <% include ./partials/header %>
-    <h1>HOLA</h1>
-    <form action="http://clev-cemex-api.firebaseapp.com/logs/1000" method="post">
-        <input type="submit" value="A VER SI JALA">
-    </form>
-    <form action = "/logs" method = "post">
-        Message: <input type="text" name = "log"><br>
-                 <input type="submit" value="Mandalo alv">
-    </form>
+<% include ./partials/header %>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4">
+            <h1>Obtener Facturas</h1>
+            <form action="/invoice/new" method="post">
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="A VER SI JALA">
+                </div>
+            </form>
+            <form action="/logs" method="post">
+                <div class="form-group">
+                    Message: <input type="text" class="form-control" name="log"><br>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="form-control" value="Mandalo alv">
+                </div>
+            </form>
 </body>
+
 </html>
